@@ -1,0 +1,100 @@
+/* styles/login-styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: url('/login/images/CNX_2024_Brand_ZoomBackgrounds-05.png') no-repeat center center fixed; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(38, 50, 56, 0.8); */
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    /* box-shadow: 0 0 10px rgba(12, 178, 156, 1); */
+    /* border-radius: 8px;
+    color: white; */
+}
+
+.branding {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.branding img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form h1 {
+    color: #125564;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #125564;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #125564;
+    border-radius: 4px;
+    color: #37474f;
+}
+
+.form-group button {
+    background-color: #125564;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #00796b;
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .branding {
+        flex: 50%;
+        margin-bottom: 0;
+    }
+
+    .login-form {
+        flex: 50%;
+        padding-left: 2rem;
+    }
+}

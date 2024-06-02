@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requester Form - Compensation Change</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Requester Form - Compensation Change</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <div class="form-group">
+                    <label for="type-change">Type of Compensation Change <span class="required">*</span></label>
+                    <select id="type-change" name="type-change" required>
+                        <option value="">Please select</option>
+                        <option value="1">Off-Cycle - Promotion</option>
+                        <option value="2">Off-Cycle - Salary Increase</option>
+                        <option value="3">Retention Bonus</option>
+                        <option value="4">CCA Allowance - Out Side CTC</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="form-details" style="display: none;">
+                <div id="basic-details" class="form-section">
+                    <h2>Basic Details</h2>
+                    <div class="form-group">
+                        <label for="employee-name">Employee Name <span class="required">*</span></label>
+                        <input type="text" id="employee-name" name="employee-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employee-id">Employee ID <span class="required">*</span></label>
+                        <input type="number" id="employee-id" name="employee-id" required>
+                    </div>
+
+                    <div class="form-group" id="current-cl-container">
+                        <label for="current-cl">Current CL <span class="required">*</span></label>
+                        <select id="current-cl" name="current-cl" required>
+                            <option value="">Please select</option>
+                            <option value="12">12</option>
+                            <option value="11">11</option>
+                            <option value="10">10</option>
+                            <option value="9A">9A</option>
+                            <option value="9B">9B</option>
+                            <option value="8A">8A</option>
+                            <option value="8B">8B</option>
+                            <option value="7">7</option>
+                            <option value="6">6</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="T12">T12</option>
+                            <option value="T11">T11</option>
+                            <option value="T10">T10</option>
+                            <option value="T9">T9</option>
+                            <option value="T8">T8</option>
+                            <option value="T7">T7</option>
+                            <option value="T6">T6</option>
+                            <option value="T5">T5</option>
+                            <option value="T4">T4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="promotion-section" class="form-section" style="display: none;">
+                    <h2>Promotion</h2>
+                    <div class="form-group">
+                        <label for="proposed-effective-date-promotion">Proposed Effective Date <span
+                                class="required">*</span></label>
+                        <input type="date" id="proposed-effective-date-promotion"
+                            name="proposed-effective-date-promotion" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-cl">Proposed CL <span class="required">*</span></label>
+                        <select id="proposed-cl" name="proposed-cl" required>
+                            <option value="">Please select</option>
+                            <option value="12">12</option>
+                            <option value="11">11</option>
+                            <option value="10">10</option>
+                            <option value="9A">9A</option>
+                            <option value="9B">9B</option>
+                            <option value="8A">8A</option>
+                            <option value="8B">8B</option>
+                            <option value="7">7</option>
+                            <option value="6">6</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="T12">T12</option>
+                            <option value="T11">T11</option>
+                            <option value="T10">T10</option>
+                            <option value="T9">T9</option>
+                            <option value="T8">T8</option>
+                            <option value="T7">T7</option>
+                            <option value="T6">T6</option>
+                            <option value="T5">T5</option>
+                            <option value="T4">T4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-job-code">Proposed Job Code <span class="required">*</span></label>
+                        <input type="text" id="proposed-job-code" name="proposed-job-code" required>
+                    </div>
+                </div>
+
+                <div id="compensation-section" class="form-section" style="display: none;">
+                    <h2>Compensation Changes</h2>
+                    <div class="form-group">
+                        <label for="proposed-effective-date-compensation">Proposed Effective Date <span
+                                class="required">*</span></label>
+                        <input type="date" id="proposed-effective-date-compensation"
+                            name="proposed-effective-date-compensation">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current-compensation">Current Compensation (Including CIP/AVP as per WD) - PA <span
+                                class="required">*</span></label>
+                        <input type="number" id="current-compensation" name="current-compensation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-compensation">Proposed Compensation (Including CIP/AVP) - PA <span
+                                class="required">*</span></label>
+                        <input type="number" id="proposed-compensation" name="proposed-compensation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-increase">Proposed Increase % - PA</label>
+                        <input type="text" id="proposed-increase" name="proposed-increase" readonly>
+                    </div>
+                </div>
+
+                <div id="retention-bonus-section" class="form-section" style="display: none;">
+                    <h2>Retention Bonus</h2>
+                    <div class="form-group">
+                        <label for="proposed-effective-date-retention">Proposed Effective Date <span
+                                class="required">*</span></label>
+                        <input type="date" id="proposed-effective-date-retention"
+                            name="proposed-effective-date-retention" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-retention-bonus">Proposed Retention Bonus <span
+                                class="required">*</span></label>
+                        <input type="number" id="proposed-retention-bonus" name="proposed-retention-bonus" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="claw-back-period-retention">Claw Back Period <span class="required">*</span></label>
+                        <select id="claw-back-period-retention" name="claw-back-period-retention" required>
+                            <option value="">Please select</option>
+                            <option value="1 month">1 month</option>
+                            <option value="3 months">3 months</option>
+                            <option value="6 months">6 months</option>
+                            <option value="9 months">9 months</option>
+                            <option value="12 months">12 months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="cca-allowance-section" class="form-section" style="display: none;">
+                    <h2>Allowance</h2>
+                    <div class="form-group">
+                        <label for="proposed-effective-date-cca">Proposed Effective Date <span
+                                class="required">*</span></label>
+                        <input type="date" id="proposed-effective-date-cca" name="proposed-effective-date-cca" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-cca-allowance">Proposed CCA Allowance <span
+                                class="required">*</span></label>
+                        <input type="number" id="proposed-cca-allowance" name="proposed-cca-allowance" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="claw-back-period-cca">Claw Back Period <span class="required">*</span></label>
+                        <select id="claw-back-period-cca" name="claw-back-period-cca" required>
+                            <option value="">Please select</option>
+                            <option value="1 month">1 month</option>
+                            <option value="3 months">3 months</option>
+                            <option value="6 months">6 months</option>
+                            <option value="9 months">9 months</option>
+                            <option value="12 months">12 months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="business-case">Business Case - Justification <span class="required">*</span></label>
+                        <textarea id="business-case" name="business-case" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="remarks">Remarks/Comment - (If any)</label>
+                        <textarea id="remarks" name="remarks" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button id="save-btn" type="button">Save</button>
+                    <div id="save-options" style="display: none;">
+                        <button id="save-pdf-btn" type="button">Save as PDF</button>
+                        <button id="save-csv-btn" type="button">Save as CSV</button>
+                    </div>
+                    <button id="next-step-btn" type="button">Next Step</button>
+                    <button id="clear-btn" type="button">Clear All</button>
+                </div>
+
+                <div id="total-requests">
+                    Total Request Recorded: 0
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script src="scripts.js"></script>
+        <script>
+            document.getElementById("logout-btn").addEventListener("click", function () {
+                window.location.href = "/index.html";
+            });
+
+            document.getElementById("next-step-btn").addEventListener("click", function () {
+                window.location.href = "/records/record.html";
+            });
+        </script>
+</body>
+
+</html>

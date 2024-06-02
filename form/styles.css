@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f7fd; /* Light blue background */
+    color: #333;
+}
+
+header {
+    background-color: #4285f4; /* Blue */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+#logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3367d6; /* Darker blue */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 1rem;
+}
+
+#logout-btn:hover {
+    background-color: #2a56c6; /* Slightly darker blue */
+}
+
+#logout-btn:focus {
+    outline: none;
+}
+
+.form-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-header, .form-section {
+    margin-bottom: 2rem;
+}
+
+.form-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #edf4fc; /* Light blue */
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-header .form-group {
+    flex: 1 1 100%;
+    margin: 0 1rem;
+}
+
+.form-header label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.form-header input,
+.form-header select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-section h2 {
+    background-color: #dceeff; /* Lighter blue */
+    padding: 1.5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+}
+
+.form-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-section textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-actions button {
+    background-color: #3367d6; /* Darker blue */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-actions button:hover {
+    background-color: #2a56c6; /* Slightly darker blue */
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-footer p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.required {
+    color: red;
+}
+
+@media (min-width: 768px) {
+    .form-header .form-group {
+        flex: 1;
+        margin: 1rem;
+    }
+}
+
+#save-options {
+    text-align: center;
+    margin-top: 1rem; /* Adjust margin as needed */
+}
+
+#save-pdf-btn,
+#save-csv-btn {
+    background-color: #4CAF50; /* Green color for PDF button */
+    color: white;
+    border: none;
+    padding: 0.4rem 0.75rem; /* Adjust padding as needed */
+    margin: 0.5rem; /* Adjust margin as needed */
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 45%; /* Set width to 50% minus margin */
+}
+
+#save-pdf-btn:hover,
+#save-csv-btn:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}

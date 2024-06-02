@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f7fd; /* Light blue background */
+    color: #333;
+}
+
+header {
+    background-color: #4285f4; /* Blue */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.table-container {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+#request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+#request-table th,
+#request-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+#request-table th {
+    background-color: #edf4fc; /* Light blue */
+}
+
+#request-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray */
+}
+
+#request-table tbody tr:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+#delete-selected-btn {
+    background-color: #d32f2f; /* Red */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#delete-selected-btn:hover {
+    background-color: #b71c1c; /* Slightly darker red on hover */
+}
+
+#delete-selected-btn:focus {
+    outline: none;
+}
